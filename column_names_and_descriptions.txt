@@ -1,0 +1,68 @@
+Table: fact_immigration
+Old Column Names	New Column Names	Description
+cicid	uid	Unique identifier for each immigration record
+i94yr	year	4-digit year of the immigration record
+i94mon	month	Numeric month of the immigration record
+i94port	city_code	Port of entry for immigration
+i94addr	state_code	State of arrival for immigration
+arrdate	arrive_date	Arrival date in SAS format
+depdate	departure_date	Departure date in SAS format
+i94mode	mode	Mode of transportation
+i94visa	visa	Visa type
+
+Table: dim_immigration_personal
+Old Column Names	New Column Names	Description
+cicid	uid	Unique identifier for each immigration personal record
+i94cit	citizen_country	Citizen country code
+i94res	residence_country	Residence country code
+biryear	birth_year	Year of birth
+gender	gender	Gender of the immigrant
+insnum	ins_num	INS number
+
+Table: dim_immigration_airline
+Old Column Names	New Column Names	Description
+cicid	uid	Unique identifier for each immigration airline record
+airline	airline	Airline code
+admnum	admission_num	Admission number
+fltno	flight_number	Flight number
+visatype	visa_type	Visa type
+
+Table: dim_temperature
+Old Column Names	New Column Names	Description
+dt	date	Date of temperature measurement
+AverageTemperature	avg_temperature	Average temperature
+AverageTemperatureUncertainty	avg_temperature_uncertainty	Uncertainty in average temperature
+City	city	City where temperature was measured
+Country	country	Country where temperature was measured
+
+Table: dim_demography
+Old Column Names	New Column Names	Description
+City	city	City name
+State	state	State name
+Male Population	male_population	Male population count
+Female Population	female_population	Female population count
+Number of Veterans	num_veterans	Number of veterans
+Foreign-born	foreign_born	Count of foreign-born residents
+Race	race	Race
+
+Table: dim_demography_stats
+Old Column Names	New Column Names	Description
+City	city	City name
+State	state	State name
+Median Age	median_age	Median age of residents
+Average Household Size	avg_household_size	Average household size
+
+Table: dim_airport
+Old Column Names	New Column Names	Description
+ident	ident	Airport identifier
+type	type	Airport type
+name	airport_name	Airport name
+elevation_ft	elevation_ft	Elevation in feet
+iso_country	iso_country	ISO country code
+iso_region	iso_region	ISO region code
+municipality	municipality	Municipality
+gps_code	gps_code	GPS code
+iata_code	iata_code	IATA code
+local_code	local_code	Local code
+coordinates	coordinates	Coordinates
+
