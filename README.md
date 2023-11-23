@@ -2,7 +2,20 @@
 
 ## Project Overview
 
-This Capstone project is part of the Data Engineering Nanodegree program and involves the design and implementation of an end-to-end data pipeline. The goal of this project is to build a data warehouse that can be used for analytical purposes. The project includes the extraction, transformation, and loading (ETL) of data from various sources into a data warehouse using Apache Spark.
+### US Immigration Data Analysis Project
+
+#### Overview
+
+This project is aimed at building a robust ETL (Extract, Transform, Load) pipeline that aggregates data from seven distinct sources and prepares it for storage within a data warehouse. The primary objective is to facilitate data analysis of the US immigration phenomenon, leveraging Business Intelligence applications. With this data warehouse, we can gain valuable insights into various aspects, including:
+
+-    Investigating potential correlations between global warming and immigrant origins.
+-    Identifying trends in immigration from specific states, whether increasing or decreasing.
+-    Determining the primary destination states for immigrants.
+-    Analyzing the age distribution of immigrants, among other insights.
+
+#### Project Background
+
+This repository represents the culmination of the Data Engineering Nanodegree program on Udacity. The code has undergone rigorous testing in the Udacity Project Workspace environment to ensure its reliability and functionality.
 
 ## Project Structure
 
