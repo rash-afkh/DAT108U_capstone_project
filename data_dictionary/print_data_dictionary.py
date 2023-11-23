@@ -1,7 +1,7 @@
 table_columns = {
     'fact_immigration': {
-        'Old Column Names': ['cicid', 'i94yr', 'i94mon', 'i94port', 'i94addr', 'arrdate', 'depdate', 'i94mode', 'i94visa'],
-        'New Column Names': ['uid', 'year', 'month', 'city_code', 'state_code', 'arrive_date', 'departure_date', 'mode', 'visa'],
+        'Old Column Names': ['cicid', 'i94yr', 'i94mon', 'i94port', 'i94addr', 'arrdate', 'depdate', 'i94mode', 'i94visa', 'country'],
+        'New Column Names': ['uid', 'year', 'month', 'city_code', 'state_code', 'arrive_date', 'departure_date', 'mode', 'visa', 'country'],
         'Description': [
             'Unique identifier for each immigration record',
             '4-digit year of the immigration record',
@@ -11,7 +11,8 @@ table_columns = {
             'Arrival date in SAS format',
             'Departure date in SAS format',
             'Mode of transportation',
-            'Visa type'
+            'Visa type',
+            'Country',
         ]
     },
     'dim_immigration_personal': {
@@ -90,7 +91,7 @@ table_columns = {
 }
 
 # Create a beautiful text file
-with open('utils/data_structure.txt', 'w') as file:
+with open('data_dictionary/data_dictionary.txt', 'w') as file:
     file.write("/////////////////////\n")
     file.write("// Data Dictionary //\n")
     file.write("/////////////////////\n\n")

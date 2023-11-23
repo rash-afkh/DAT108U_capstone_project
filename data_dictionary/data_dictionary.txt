@@ -14,6 +14,7 @@ fact_immigration
 - depdate -> departure_date: Departure date in SAS format
 - i94mode -> mode: Mode of transportation
 - i94visa -> visa: Visa type
+- country -> country: Country
 
 -------
 dim_immigration_personal

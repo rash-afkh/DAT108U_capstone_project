@@ -1,0 +1,89 @@
+Table fact_immigration as F {
+  uid int [primary key]
+  year int
+  month int
+  city_code string
+  state_code string
+  arrive_date date
+  departure_date date
+  mode int
+  visa int
+  country string
+}
+
+Table dim_immigration_personal as P {
+  uid int [primary key]
+  citizen_country int
+  residence_country int
+  birth_year int
+  gender string
+  ins_num string
+}
+
+Table dim_immigration_airline as A {
+  uid int [primary key]
+  airline string
+  admission_num int
+  flight_number string
+  visa_type string
+}
+
+Table dim_temperature as T {
+  date date [primary key]
+  avg_temperature float
+  avg_temperature_uncertainty float
+  city string
+  country string
+  year int
+  month int
+}
+
+Table dim_demography as D {
+  demog_pop_id int [primary key]
+  city string
+  state string
+  male_population int
+  female_population int
+  num_veterans int
+  foreign_born int
+  race string
+}
+
+Table dim_demography_stats as DS {
+  demog_stat_id int [primary key]
+  city string
+  state string
+  median_age float
+  avg_household_size float
+}
+
+Table dim_airport as AP {
+  ident string [primary key]
+  type string
+  airport_name string
+  elevation_ft int
+  iso_country string
+  iso_region string
+  municipality string
+  gps_code string
+  local_code string
+  coordinates string
+}
+
+Table state_code as SC {
+  code string [primary key]
+  state string
+}
+
+Table city_code as CC {
+  code string [primary key]
+  city string
+}
+
+
+Ref: F.uid > P.uid
+Ref: F.uid > A.uid
+Ref: F.state_code > SC.code
+Ref: F.city_code > CC.code
+Ref: D.city > DS.city
+Ref: D.state > DS.state
